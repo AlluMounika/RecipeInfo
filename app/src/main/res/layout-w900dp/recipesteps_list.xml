@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context="com.example.lenovo.recipeinfo.RecipeStepsListActivity">
+
+    <!--
+    This layout is a two-pane layout for the steps
+    master/detail flow.
+
+    -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ingredients"
+            android:textSize="20sp"
+            android:textColor="@color/color_red"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ingredient_View"
+            />
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/recipesteps_list"
+            android:name="com.example.lenovo.recipeinfo.RecipeStepsListFragment"
+            android:layout_width="@dimen/item_width"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="com.example.lenovo.recipeinfo.RecipeStepsListActivity"
+            tools:listitem="@layout/recipesteps_list_content" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/recipesteps_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        />
+
+</LinearLayout>

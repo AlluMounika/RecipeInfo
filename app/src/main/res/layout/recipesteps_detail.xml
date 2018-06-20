@@ -1,0 +1,44 @@
+<!--<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recipesteps_detail"
+    style="?android:attr/textAppearanceLarge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:textIsSelectable="true"
+    tools:context="com.example.lenovo.recipeinfo.RecipeStepsDetailFragment" />-->
+
+
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recipesteps_detail"
+    android:orientation="vertical"
+    >
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
+        android:id="@+id/exo_playerFragment">
+    </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thumbnailimage"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:text="Description"
+        android:textSize="20sp"
+        android:textColor="#009099"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:id="@+id/descriptionFragment" />
+</LinearLayout>
